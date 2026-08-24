@@ -157,9 +157,6 @@ document.addEventListener('click', function (e) {
   });
 })();
 
-
-/* ─── Galeria — filtros ──────────────────────────────────── */
-
 /* ─── Agenda ───────────────────────────────────────────── */
 
 (function initAgendaForm() {
