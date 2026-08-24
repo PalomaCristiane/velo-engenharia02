@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Velo Engenharia — Reforma Comercial de Alto Padrão</title>
+  <meta name="description" content="A Velo Engenharia gerencia reformas comerciais do diagnóstico à entrega — com planejamento rigoroso, transparência total e um engenheiro dedicado ao seu projeto." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       HEADER / NAVEGAÇÃO
+  ═══════════════════════════════════════════ -->
+  <header id="header">
+    <div class="header-inner">
+
+      <button class="logo" onclick="scrollToSection('#inicio')" aria-label="Velo Engenharia — página inicial">
+       <div class="logo">
+       <img src="simbolo_velo.png" class="logo-symbol">
+        <div class="logo-text">
+          <span class="logo-name">Velo</span>
+          <span class="logo-sub">Engenharia</span>
+        </div>
+      </button>
+
+      <nav id="desktop-nav" aria-label="Navegação principal">
+        <a href="#inicio"    class="nav-link" data-target="#inicio">Início</a>
+        <a href="#sobre"     class="nav-link" data-target="#sobre">Sobre</a>
+        <a href="#servicos"  class="nav-link" data-target="#servicos">Serviços</a>
+        <a href="#galeria"   class="nav-link" data-target="#galeria">Galeria</a>
+        <a href="#blog"      class="nav-link" data-target="#blog">Blog</a>
+        <a href="#agenda"    class="nav-link" data-target="#agenda">Agenda</a>
+        <a href="#contato"   class="nav-link" data-target="#contato">Contato</a>
+      </nav>
+
+      <button class="btn-gold header-cta" onclick="scrollToSection('#orcamento')">
+        Solicitar Orçamento
+      </button>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" aria-hidden="true">
+      <nav>
+        <a href="#inicio"    class="mobile-nav-link" data-target="#inicio">Início</a>
+        <a href="#sobre"     class="mobile-nav-link" data-target="#sobre">Sobre</a>
+        <a href="#servicos"  class="mobile-nav-link" data-target="#servicos">Serviços</a>
+        <a href="#galeria"   class="mobile-nav-link" data-target="#galeria">Galeria</a>
+        <a href="#blog"      class="mobile-nav-link" data-target="#blog">Blog</a>
+        <a href="#agenda"    class="mobile-nav-link" data-target="#agenda">Agenda</a>
+        <a href="#contato"   class="mobile-nav-link" data-target="#contato">Contato</a>
+      </nav>
+      <button class="btn-gold mobile-cta" onclick="scrollToSection('#orcamento')">
+        Solicitar Orçamento
+      </button>
+    </div>
+  </header>
+
+
+  <!-- ═══════════════════════════════════════════
+       INÍCIO — HERO
+  ═══════════════════════════════════════════ -->
+  <section id="inicio" class="hero">
+    <div class="hero-bg">
+      <img
+        src="https://images.unsplash.com/photo-1656038338350-6937f2b5e18b?w=1600&h=900&fit=crop&auto=format"
+        alt=""
+        aria-hidden="true"
+        class="hero-img"
+      />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-accent-line"></div>
+
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="badge reveal">
+          <span class="badge-dot"></span>
+          Engenharia Comercial de Alto Padrão
+        </div>
+
+        <h1 class="hero-title reveal">
+          Sua obra,<br />
+          <span class="text-gold">Sem surpresas.</span><br />
+          Entregue no prazo.
+        </h1>
+
+        <p class="hero-desc reveal">
+          A Velo Engenharia gerencia reformas comerciais do diagnóstico à entrega — com planejamento rigoroso, transparência total e um engenheiro dedicado ao seu projeto.
+        </p>
+
+        <div class="hero-actions reveal">
+           <!--<button class="btn-gold" onclick="scrollToSection('#orcamento')">Solicitar Orçamento</button> -->
+          <button class="btn-outline" onclick="scrollToSection('#servicos')">Nossos Serviços</button>
+        </div>
+
+        <div class="hero-stats reveal">
+          <div class="stat">
+            <span class="stat-num">200+</span>
+            <span class="stat-label">Obras Concluídas</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">2</span>
+            <span class="stat-label">Anos de Mercado</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">98%</span>
+            <span class="stat-label">Clientes Satisfeitos</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card reveal-right">
+        <img
+          src="https://images.unsplash.com/photo-1760067537877-dd4d2722c649?w=700&h=400&fit=crop&auto=format"
+          alt="Resultado de reforma comercial de alto padrão"
+          class="hero-card-img"
+        />
+        <div class="hero-card-body">
+          <div class="label-gold">Obra Recente</div>
+          <p class="hero-card-title">Clínica Estética Premium — SP</p>
+          <p class="hero-card-sub">Reforma completa de 420m² · Entregue em 68 dias</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SOBRE
+  ═══════════════════════════════════════════ -->
+  <section id="sobre" class="section bg-offwhite">
+    <div class="container sobre-grid">
+
+      <div class="sobre-imgs reveal-left">
+        <img
+          src="https://images.unsplash.com/photo-1565118387387-add70a563efe?w=400&h=500&fit=crop&auto=format"
+          alt="Equipe Velo Engenharia em obra"
+          class="sobre-img-main"
+        />
+        <div class="sobre-imgs-col">
+          <img
+            src="https://images.unsplash.com/photo-1497366412874-3415097a27e7?w=400&h=240&fit=crop&auto=format"
+            alt="Espaço comercial reformado"
+            class="sobre-img-small"
+          />
+          <div class="sobre-years">
+            <span class="sobre-years-num">1</span>
+            <span class="sobre-years-label">Anos de Experiência</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sobre-text reveal-right">
+        <div class="label-gold">Sobre a Empresa</div>
+        <h2 class="section-title underline-gold">Mais do que uma construtora.<br />Uma parceira de negócios.</h2>
+        <p class="body-text">
+          A Velo Engenharia nasceu para resolver um desafio comum: empresários que perdem tempo e dinheiro tentando coordenar reformas sem apoio técnico. Atrasos, fornecedores pouco confiáveis e orçamentos que fogem do controle não precisam fazer parte da sua experiência.
+
+        </p>
+        <p class="body-text" style="margin-top: 1rem;">
+          Nossa equipe assume a gestão completa do projeto — do diagnóstico inicial à entrega das chaves. Trabalhamos com transparência, controle de custos em tempo real e um engenheiro dedicado exclusivamente ao seu espaço.
+        </p>
+
+       <div class="sobre-values">
+
+  <div class="value-card">
+    <i data-lucide="target" class="value-icon"></i>
+    <span class="value-title">Propósito</span>
+    <span class="value-desc">Entregas no prazo, sempre</span>
+  </div>
+
+  <div class="value-card">
+    <i data-lucide="lightbulb" class="value-icon"></i>
+    <span class="value-title">Objetivo</span>
+    <span class="value-desc">Eliminar imprevistos na obra</span>
+  </div>
+
+  <div class="value-card">
+    <i data-lucide="handshake" class="value-icon"></i>
+    <span class="value-title">Forma</span>
+    <span class="value-desc">Gestão técnica clara e confiável</span>
+  </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SERVIÇOS
+  ═══════════════════════════════════════════ -->
+  <section id="servicos" class="section bg-graphite">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <div class="label-gold">O que fazemos</div>
+        <h2 class="section-title text-white">Serviços que eliminam<br />o caos da sua obra</h2>
+        <p class="body-text text-muted">Cada etapa da reforma tem um responsável técnico. Você acompanha tudo sem precisar gerenciar nada.</p>
+      </div>
+
+      <div class="problems-banner reveal">
+        <div class="label-gold">Problemas que resolvemos</div>
+        <div class="problems-grid">
+          <div class="problem-item">
+            <span class="problem-x">✕</span>
+            <span>Dificuldade de organizar fornecedores</span>
+          </div>
+          <div class="problem-item">
+            <span class="problem-x">✕</span>
+            <span>Gastos fora do orçamento previsto</span>
+          </div>
+          <div class="problem-item">
+            <span class="problem-x">✕</span>
+            <span>Atrasos sem justificativa técnica</span>
+          </div>
+          <div class="problem-item">
+            <span class="problem-x">✕</span>
+            <span>Decisões tomadas sem suporte especializado</span>
+          </div>
+        </div>
+      </div>
+
+     <div class="services-grid">
+
+  <div class="service-card reveal">
+    <div class="service-icon">
+      <i data-lucide="search-check"></i>
+    </div>
+    <h3 class="service-title">Diagnóstico Técnico</h3>
+    <p class="service-desc">
+      Avaliação completa do espaço existente, identificando riscos, necessidades estruturais e oportunidades de melhoria antes de qualquer intervenção.
+    </p>
+    <div class="service-line"></div>
+  </div>
+
+  <div class="service-card reveal">
+    <div class="service-icon">
+      <i data-lucide="ruler"></i>
+    </div>
+    <h3 class="service-title">Planejamento de Obra</h3>
+    <p class="service-desc">
+      Desenvolvimento do cronograma detalhado, orçamento transparente e escolha de fornecedores qualificados para garantir previsibilidade total.
+    </p>
+    <div class="service-line"></div>
+  </div>
+
+  <div class="service-card reveal">
+    <div class="service-icon">
+      <i data-lucide="hard-hat"></i>
+    </div>
+    <h3 class="service-title">Execução Gerenciada</h3>
+    <p class="service-desc">
+      Coordenação de todas as equipes e etapas da obra com supervisão diária de um engenheiro responsável dedicado ao seu projeto.
+    </p>
+    <div class="service-line"></div>
+  </div>
+
+  <div class="service-card reveal">
+    <div class="service-icon">
+      <i data-lucide="chart-no-axes-combined"></i>
+    </div>
+    <h3 class="service-title">Controle de Custos</h3>
+    <p class="service-desc">
+      Relatórios financeiros periódicos com planilha de gastos em tempo real. Zero surpresas no bolso, do início à entrega das chaves.
+    </p>
+    <div class="service-line"></div>
+  </div>
+
+  <div class="service-card reveal">
+    <div class="service-icon">
+      <i data-lucide="clipboard-check"></i>
+    </div>
+    <h3 class="service-title">Entrega e Vistoria</h3>
+    <p class="service-desc">
+      Entrega com laudo técnico, vistoria completa e garantia pós-obra. Seu espaço pronto para funcionar, no prazo combinado.
+    </p>
+    <div class="service-line"></div>
+  </div>
+
+  <div class="service-card reveal">
+    <div class="service-icon">
+      <i data-lucide="shield-check"></i>
+    </div>
+    <h3 class="service-title">Suporte Pós-Obra</h3>
+    <p class="service-desc">
+      Acompanhamento durante os primeiros meses de funcionamento para assegurar que tudo esteja dentro do esperado e em perfeito estado.
+    </p>
+    <div class="service-line"></div>
+  </div>
+
+</div>
+
+      <!-- Etapas -->
+      <div class="reveal">
+        <div class="label-gold text-center" style="margin-bottom: 2.5rem;">Etapas da sua obra</div>
+        <div class="steps-flow">
+          <div class="step-item">
+            <div class="step-num">1</div>
+            <span class="step-label">Diagnóstico</span>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step-item">
+            <div class="step-num">2</div>
+            <span class="step-label">Projeto</span>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step-item">
+            <div class="step-num">3</div>
+            <span class="step-label">Execução</span>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step-item">
+            <div class="step-num">4</div>
+            <span class="step-label">Controle</span>
+          </div>
+          <div class="step-connector"></div>
+          <div class="step-item">
+            <div class="step-num">5</div>
+            <span class="step-label">Entrega</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       GALERIA
+  ═══════════════════════════════════════════ -->
+  <section id="galeria" class="section bg-offwhite">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <div class="label-gold">Portfólio</div>
+        <h2 class="section-title">Obras que falam<br />por si mesmas</h2>
+        <p class="body-text text-muted-dark">Mais de 200 projetos entregues, transformando espaços em toda a região. Veja alguns dos resultados.</p>
+      </div>
+
+      <div class="gallery-filters reveal">
+        <button class="filter-btn active" data-filter="todos">Todos</button>
+        <button class="filter-btn" data-filter="residencial">Residencial</button>
+        <button class="filter-btn" data-filter="comercial">Comercial</button>
+        <button class="filter-btn" data-filter="corporativo">Corporativo</button>
+        <button class="filter-btn" data-filter="franquia">Industrial</button>
+        <button class="filter-btn" data-filter="loja">Reforma</button>
+      </div>
+
+      <div class="gallery-grid" id="gallery-grid">
+
+        <div class="gallery-card reveal" data-type="residencial">
+          <div class="gallery-img-wrap">
+            <img src="frenteresidencial.webp" alt="Residência de Alto Padrão" />
+            <div class="gallery-overlay">
+              <div class="label-gold">Residencial</div>
+              <p class="gallery-overlay-title">Residência Alto Padrão</p>
+              <p class="gallery-overlay-loc">São João del-Rei, MG</p>
+            </div>
+          </div>
+          <div class="gallery-footer">
+            <div class="label-gold">Residencial</div>
+            <p class="gallery-footer-title">Residência Alto Padrão</p>
+          </div>
+        </div>
+
+        <div class="gallery-card reveal" data-type="comercial">
+          <div class="gallery-img-wrap">
+            <img src="cafeteria.webp" alt="Café & Restaurante" />
+            <div class="gallery-overlay">
+              <div class="label-gold">Comercial</div>
+              <p class="gallery-overlay-title">Café & Restaurante</p>
+              <p class="gallery-overlay-loc">Tiradentes, MG</p>
+            </div>
+          </div>
+          <div class="gallery-footer">
+            <div class="label-gold">Comercial</div>
+            <p class="gallery-footer-title">Café & Restaurante</p>
+          </div>
+        </div>
+
+        <div class="gallery-card reveal" data-type="corporativo">
+          <div class="gallery-img-wrap">
+            <img src="escritorio.png" alt="Escritório Empresarial" />
+            <div class="gallery-overlay">
+              <div class="label-gold">Corporativo</div>
+              <p class="gallery-overlay-title">Escritório Empresarial</p>
+              <p class="gallery-overlay-loc">São João del-Rei, MG</p>
+            </div>
+          </div>
+          <div class="gallery-footer">
+            <div class="label-gold">Corporativo</div>
+            <p class="gallery-footer-title">Escritório Empresarial</p>
+          </div>
+        </div>
+
+        <div class="gallery-card reveal" data-type="franquia">
+          <div class="gallery-img-wrap">
+            <img src="frenteresidencial.webp" alt="Franquia de Alimentação" />
+            <div class="gallery-overlay">
+              <div class="label-gold">Franquia</div>
+              <p class="gallery-overlay-title">Franquia de Alimentação</p>
+              <p class="gallery-overlay-loc">Barueri, SP</p>
+            </div>
+          </div>
+          <div class="gallery-footer">
+            <div class="label-gold">Franquia</div>
+            <p class="gallery-footer-title">Franquia de Alimentação</p>
+          </div>
+        </div>
+
+        <div class="gallery-card reveal" data-type="loja">
+          <div class="gallery-img-wrap">
+            <img src="https://images.unsplash.com/photo-1760067537064-b3a93d6e4bc2?w=600&h=400&fit=crop&auto=format" alt="Loja de Moda Feminina" />
+            <div class="gallery-overlay">
+              <div class="label-gold">Loja</div>
+              <p class="gallery-overlay-title">Loja de Moda Feminina</p>
+              <p class="gallery-overlay-loc">Guarulhos, SP</p>
+            </div>
+          </div>
+          <div class="gallery-footer">
+            <div class="label-gold">Loja</div>
+            <p class="gallery-footer-title">Loja de Moda Feminina</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       BLOG
+  ═══════════════════════════════════════════ -->
+  <section id="blog" class="section bg-cream">
+    <div class="container">
+
+      <div class="blog-header">
+        <div class="reveal">
+          <div class="label-gold">Blog &amp; Conteúdo</div>
+          <h2 class="section-title">Conhecimento que<br />protege seu bolso</h2>
+          <button class="btn-outline-dark reveal" onclick="window.open('https://jarussi.com.br/blog', '_blank')"> Ver Todos os Artigos </button>
+        </div>   
+        
+      
+      <div class="blog-grid">
+
+        <article class="blog-card reveal">
+          <div class="blog-img-wrap">
+            <img src="https://images.unsplash.com/photo-1565118387387-add70a563efe?w=480&h=300&fit=crop&auto=format" alt="Erros comuns em obras comerciais" />
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span class="blog-tag">Planejamento</span>
+              <span class="blog-date">14 Ago 2026 · 6 min de leitura</span>
+            </div>
+            <h3 class="blog-title">Como evitar os erros mais comuns em obras comerciais</h3>
+            <p class="blog-excerpt">Descubra quais são os principais equívocos que empresários cometem ao reformar um espaço comercial e como a gestão profissional os elimina.</p>
+            <a href="https://blog.obraprima.eng.br/erros-nas-obras-conheca-os-5-mais-comuns-e-saiba-como-evita-los-obra-prima/" class="blog-link" target="_blank"
+   rel="noopener noreferrer">
+              Ler artigo
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="blog-card reveal">
+          <div class="blog-img-wrap">
+            <img src="https://images.unsplash.com/photo-1497366412874-3415097a27e7?w=480&h=300&fit=crop&auto=format" alt="Orçamento de obra" />
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span class="blog-tag">Controle</span>
+              <span class="blog-date">5 Ago 2026 · 5 min de leitura</span>
+            </div>
+            <h3 class="blog-title">Saiba como o orçamento da obra impacta o valor final de imóveis</h3>
+            <p class="blog-excerpt">Transparência financeira é a base de uma reforma bem-sucedida. Entenda como estruturar e acompanhar gastos sem perder o controle.</p>
+            <a href="https://valorinveste.globo.com/objetivo/gastar-bem/noticia/2022/09/11/saiba-como-o-orcamento-da-obra-impacta-o-valor-final-de-imoveis.ghtml" class="blog-link"
+            target="_blank" rel="noopener noreferrer">
+              Ler artigo
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="blog-card reveal">
+          <div class="blog-img-wrap">
+            <img src="img5.avif" alt="Tendências em espaços comerciais" />
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span class="blog-tag">Tendências</span>
+              <span class="blog-date">27 Jul 2026 · 7 min de leitura</span>
+            </div>
+            <h3 class="blog-title">Tendências globais da arquitetura de alto padrão que estão chegando ao Brasil</h3>
+            <p class="blog-excerpt">O futuro da arquitetura de luxo já começou. Veja o que estará em destaque em 2026.</p>
+            <a href="https://jarussi.com.br/blog/Tendencias-globais-da-arquitetura-de-alto-padrao-que-estao-chegando-ao-Brasil" class="blog-link"
+            target="_blank" rel="noopener noreferrer">
+              Ler artigo
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+     AGENDA
+═══════════════════════════════════════════ -->
+
+<section id="agenda" class="section bg-graphite">
+
+    <div class="container">
+
+        <div class="section-header reveal">
+            <div class="label-gold">Agenda</div>
+
+            <h2 class="section-title text-white">
+                Agende uma conversa<br>
+                sobre seu projeto
+            </h2>
+
+            <p class="body-text text-muted">
+                Reunião online de 30 minutos, sem compromisso.
+                Um engenheiro da Velo ouvirá sua necessidade e
+                indicará os próximos passos.
+            </p>
+        </div>
+
+        <div class="agenda-form-wrap reveal">
+
+            <!-- Mensagem de sucesso -->
+            <div class="success-box" id="agenda-success" hidden>
+
+                <div class="success-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="3" y="4" width="18" height="17" rx="2"></rect>
+                        <path d="M16 2v4"></path>
+                        <path d="M8 2v4"></path>
+                        <path d="M3 10h18"></path>
+                        <path d="m8 15 2 2 5-5"></path>
+                    </svg>
+                </div>
+
+                <h3 class="success-title">
+                    Agendamento Confirmado!
+                </h3>
+
+                <p class="success-desc">
+                    Você receberá um e-mail de confirmação
+                    com o link da reunião em breve.
+                </p>
+
+            </div>
+
+            <!-- FORMULÁRIO -->
+            <form id="agenda-form">
+
+                <!-- DATA -->
+
+                <div class="form-group">
+
+                    <div class="label-gold" style="margin-bottom:1rem;">
+                        Escolha o dia
+                    </div>
+
+                    <input type="date" id="agenda-date" class="form-input dark calendar-input" min="2026-08-01" max="2026-08-31" required>
+
+                </div>
+
+                <!-- HORÁRIO -->
+
+                <div class="form-group">
+
+                    <div class="label-gold" style="margin-bottom:1rem;">
+                        Horário disponível
+                    </div>
+
+                    <div class="time-picker">
+
+                        <button type="button" class="time-btn" data-time="09:00">09:00</button>
+
+                        <button type="button" class="time-btn" data-time="10:00">10:00</button>
+
+                        <button type="button" class="time-btn" data-time="11:00">11:00</button>
+
+                        <button type="button" class="time-btn" data-time="14:00">14:00</button>
+
+                        <button type="button" class="time-btn" data-time="15:00">15:00</button>
+
+                        <button type="button" class="time-btn" data-time="16:00">16:00</button>
+
+                    </div>
+
+                </div>
+
+                <!-- NOME E EMAIL -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label class="form-label" for="agenda-name">
+                            Nome completo
+                        </label>
+
+                        <input type="text" id="agenda-name" class="form-input dark" placeholder="Seu nome" required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label class="form-label" for="agenda-email">
+                            E-mail
+                        </label>
+
+                        <input type="email" id="agenda-email" class="form-input dark" placeholder="seu@email.com" required>
+
+                    </div>
+
+                </div>
+
+                <!-- TELEFONE E EMPRESA -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label class="form-label" for="agenda-phone">
+                            Telefone
+                        </label>
+
+                        <input type="tel" id="agenda-phone" class="form-input dark" placeholder="(00) 00000-0000" required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label class="form-label" for="agenda-company">
+                            Empresa
+                        </label>
+
+                        <input type="text" id="agenda-company" class="form-input dark" placeholder="Nome da empresa">
+
+                    </div>
+
+                </div>
+
+                <!-- PROJETO -->
+
+                <div class="form-group">
+
+                    <label class="form-label" for="agenda-message">
+                        Descreva seu projeto
+                    </label>
+
+                    <textarea
+                        id="agenda-message"
+                        class="form-input dark form-textarea"
+                        placeholder="Conte um pouco sobre seu projeto"></textarea>
+
+                </div>
+
+                <!-- BOTÃO -->
+
+                <button type="submit" class="btn-gold btn-full"> Confirmar Agendamento </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+  <!-- ═══════════════════════════════════════════
+       CONTATO
+  
+  <section id="contato" class="section bg-offwhite">
+    <div class="container contato-grid">
+
+      <div class="reveal-left">
+        <div class="label-gold">Contato</div>
+        <h2 class="section-title">Fale com um<br />engenheiro agora</h2>
+        <p class="body-text">Tem dúvidas sobre sua obra? Entre em contato pelos canais abaixo ou envie uma mensagem — nossa equipe responde em até 2 horas.</p>
+
+       <div class="channels">
+
+  <div class="channel">
+    <div class="channel-icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2
+                 19.79 19.79 0 0 1-8.63-3.07
+                 19.5 19.5 0 0 1-6-6
+                 A19.79 19.79 0 0 1 2.12 4.18
+                 2 2 0 0 1 5.11 2h3
+                 a2 2 0 0 1 2 1.72
+                 12.84 12.84 0 0 0 .7 2.81
+                 2 2 0 0 1-.45 2.11L9.09 9.91
+                 a16 16 0 0 0 6 6l1.27-1.27
+                 a2 2 0 0 1 2.11-.45
+                 12.84 12.84 0 0 0 2.81.7
+                 A2 2 0 0 1 22 16.92z">
+        </path>
+      </svg>
+    </div>
+
+    <div class="channel-text">
+      <div class="label-gold">Telefone</div>
+      <div class="channel-value">(32) 9996-9859</div>
+      <div class="channel-sub">Segunda a Sexta, 8h–18h</div>
+    </div>
+  </div>
+
+
+  <div class="channel">
+    <div class="channel-icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8
+                 8.5 8.5 0 0 1-7.6 4.7
+                 8.38 8.38 0 0 1-3.8-.9
+                 L3 21l1.9-5.7
+                 A8.38 8.38 0 0 1 4 11.5
+                 8.5 8.5 0 1 1 21 11.5z">
+        </path>
+        <path d="M8 10.5h8"></path>
+        <path d="M8 14h5"></path>
+      </svg>
+    </div>
+
+    <div class="channel-text">
+      <div class="label-gold">WhatsApp</div>
+      <div class="channel-value">(11) 99876-5432</div>
+      <div class="channel-sub">Resposta em até 30 minutos</div>
+    </div>
+  </div>
+
+
+  <div class="channel">
+    <div class="channel-icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+        <path d="m3 7 9 6 9-6"></path>
+      </svg>
+    </div>
+
+    <div class="channel-text">
+      <div class="label-gold">E-mail</div>
+      <div class="channel-value">contato@veloengenharia.com.br</div>
+      <div class="channel-sub">Resposta em até 2 horas úteis</div>
+    </div>
+  </div>
+
+
+  <div class="channel">
+    <div class="channel-icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0z"></path>
+        <circle cx="12" cy="10" r="2.5"></circle>
+      </svg>
+    </div>
+
+    <div class="channel-text">
+      <div class="label-gold">Localização</div>
+        <div class="channel-value">
+            Rua Capitão Vilarim, 95<br>
+            Bela Vista — São João del-Rei, MG<br>
+            CEP 36301-008
+        </div>
+      <div class="channel-sub">Atendemos todo o Estado</div>
+    </div>
+  </div>
+
+</div>
+
+        <form id="contato-form" class="dark-form" novalidate>
+          <div class="dark-form-header">Envie uma mensagem</div>
+
+          <div class="form-group">
+            <label class="form-label" for="c-name">Nome</label>
+            <input type="text" id="c-name" class="form-input dark" placeholder="Seu nome completo" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="c-phone">Telefone / WhatsApp</label>
+            <input type="tel" id="c-phone" class="form-input dark" placeholder="(11) 99999-9999" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="c-email">E-mail</label>
+            <input type="email" id="c-email" class="form-input dark" placeholder="seu@email.com" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="c-msg">Mensagem</label>
+            <textarea id="c-msg" class="form-input dark form-textarea" placeholder="Conte-nos sobre seu projeto..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn-gold btn-full">Enviar Mensagem</button>
+        </form>
+      </div>═══════════════════════════════════════════ -->
+      
+     
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       ORÇAMENTO
+  ═══════════════════════════════════════════ -->
+  <section id="orcamento" class="section bg-dark">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <div class="label-gold">Orçamento Gratuito</div>
+        <h2 class="section-title text-white">Receba um orçamento<br />sem compromisso</h2>
+        <p class="body-text text-muted">Preencha as informações abaixo. Em até 24 horas um engenheiro da Velo entrará em contato com uma proposta detalhada para o seu projeto.</p>
+      </div>
+
+       <div class="success-box" id="orc-success" hidden>
+
+            <div class="success-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M7.5 12.5L10.5 15.5L16.5 9.5"></path>
+                </svg>
+        </div>
+        <h3 class="success-title">Solicitação Recebida!</h3>
+        <p class="success-desc">
+            Nossa equipe analisará seu projeto e entrará em contato em até 24 horas com uma proposta completa.
+        </p>
+
+    </div>
+
+      <form id="orc-form" class="orc-form reveal" novalidate>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="o-name">Nome completo</label>
+            <input type="text" id="o-name" name="nome" class="form-input dark" placeholder="Seu nome" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="o-email">E-mail</label>
+            <input type="email" id="o-email" name="email" class="form-input dark" placeholder="seu@email.com" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="o-phone">Telefone / WhatsApp</label>
+            <input type="tel" id="o-phone" name="phone" class="form-input dark" placeholder="(32) 99999-9999" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="o-biz">Nome do negócio</label>
+            <input type="text" id="o-biz" name="biz"class="form-input dark" placeholder="Sua empresa / loja" required />
+          </div>
+        </div>
+
+        <div class="form-row form-row-3">
+          <div class="form-group">
+            <label class="form-label" for="o-type">Tipo de espaço</label>
+            <select id="o-type" name="type"class="form-input dark form-select" required>
+              <option value="">Selecione</option>
+              <option>Loja</option>
+              <option>Clínica</option>
+              <option>Academia</option>
+              <option>Franquia</option>
+              <option>Restaurante</option>
+              <option>Escritório</option>
+              <option>Outro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="o-size">Metragem (m²)</label>
+            <select id="o-size" name="size"class="form-input dark form-select" required>
+              <option value="">Selecione</option>
+              <option>Até 50m²</option>
+              <option>50–150m²</option>
+              <option>150–300m²</option>
+              <option>300–500m²</option>
+              <option>Acima de 500m²</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="o-time">Prazo desejado</label>
+            <select id="o-time" name="time"class="form-input dark form-select">
+              <option value="">Selecione</option>
+              <option>Urgente (até 30 dias)</option>
+              <option>30–60 dias</option>
+              <option>60–90 dias</option>
+              <option>Mais de 90 dias</option>
+              <option>Em aberto</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="o-budget">Investimento previsto</label>
+          <select id="o-budget" name="budget"class="form-input dark form-select">
+            <option value="">Selecione uma faixa</option>
+            <option>Até R$ 50.000</option>
+            <option>R$ 50–100 mil</option>
+            <option>R$ 100–250 mil</option>
+            <option>R$ 250–500 mil</option>
+            <option>Acima de R$ 500 mil</option>
+            <option>A definir</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="o-desc">Descreva seu projeto</label>
+          <textarea
+    id="o-desc"
+    class="form-input dark form-textarea"
+    placeholder="Conte-nos sobre o espaço, o que deseja reformar..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-gold btn-full btn-xl">Solicitar Orçamento Gratuito</button>
+        <div id="orc-success" class="success-box" hidden>
+    <h3>Orçamento enviado com sucesso!</h3>
+    <p>Em breve entraremos em contato.</p>
+</div>
+
+        <p class="form-privacy">Seus dados são protegidos e não serão compartilhados com terceiros.</p>
+      </form>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer id="footer">
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        <div class="logo">
+          <img src="simbolo_velo.png" alt="Velo Engenharia" class="logo-symbol">
+          <div class="logo-text">
+            <span class="logo-name">Velo Engenharia</span>
+          </div>
+        </div>
+        <p class="footer-desc">Gestão completa de obras comerciais com transparência, planejamento e engenheiros dedicados ao seu projeto.</p>
+        <div class="social-links">
+          <a href="#" class="social-btn" aria-label="Instagram">I</a>
+          <a href="#" class="social-btn" aria-label="LinkedIn">L</a>
+          <a href="#" class="social-btn" aria-label="YouTube">Y</a>
+        </div>
+      </div>
+
+      <div class="footer-nav">
+        <div class="footer-nav-title">Navegação</div>
+        <nav>
+          <a href="#inicio"    class="footer-link" data-target="#inicio">Início</a>
+          <a href="#sobre"     class="footer-link" data-target="#sobre">Sobre</a>
+          <a href="#servicos"  class="footer-link" data-target="#servicos">Serviços</a>
+          <a href="#galeria"   class="footer-link" data-target="#galeria">Galeria</a>
+          <a href="#blog"      class="footer-link" data-target="#blog">Blog</a>
+          <a href="#agenda"    class="footer-link" data-target="#agenda">Agenda</a>
+          <a href="#contato"   class="footer-link" data-target="#contato">Contato</a>
+          <a href="#orcamento" class="footer-link" data-target="#orcamento">Orçamento</a>
+        </nav>
+      </div>
+
+      <div class="footer-contact">
+        <div class="footer-nav-title">Contato Rápido</div>
+        <p>(32) 9996-9859</p>
+        <p>contato@veloengenharia.com.br</p>
+        <p> Rua Capitão Vilarim, 95<br>
+            Bela Vista — São João del-Rei, MG<br>
+            CEP 36301-008 </p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© 2026 Velo Engenharia. Todos os direitos reservados.</p>
+        <p> CREA-MG · Engenharia Civil e Reforma Comercial</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Back to top -->
+  <button id="back-to-top" aria-label="Voltar ao topo">
+    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+      <path d="M18 15l-6-6-6 6" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <script>
+    lucide.createIcons();
+  </script>
+
+ <!-- Botão do Chat -->
+<div id="chat-toggle">
+    💬
+</div>
+
+<!-- Janela do Chat -->
+<div id="chat-box">
+    <div id="chat-header">
+        Atendimento Online
+    </div>
+
+    <div id="chat-messages">
+        <div class="bot-message">
+            Olá! Como posso ajudar?
+        </div>
+    </div>
+
+    <div id="chat-input-area">
+        <input type="text" id="chat-input" placeholder="Digite sua mensagem...">
+        <button id="send-message">Enviar</button>
+    </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
