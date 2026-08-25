@@ -873,28 +873,80 @@
     lucide.createIcons();
   </script>
 
- <!-- Botão do Chat -->
-<div id="chat-toggle">
+```html
+<!-- ==========================================
+     CHAT FLUTUANTE - VELO ENGENHARIA
+========================================== -->
+
+<!-- Botão do Chat -->
+<button id="chat-toggle" type="button" aria-label="Abrir atendimento">
     💬
-</div>
+</button>
+
 
 <!-- Janela do Chat -->
 <div id="chat-box">
+
+    <!-- Cabeçalho -->
     <div id="chat-header">
-        Atendimento Online
-    </div>
 
-    <div id="chat-messages">
-        <div class="bot-message">
-            Olá! Como posso ajudar?
+        <div>
+            <strong>Velo Engenharia</strong>
+            <span>Atendimento Online</span>
         </div>
+
+        <button id="chat-close" type="button" aria-label="Fechar chat">
+            ×
+        </button>
+
     </div>
 
-    <div id="chat-input-area">
-        <input type="text" id="chat-input" placeholder="Digite sua mensagem...">
-        <button id="send-message">Enviar</button>
+
+    <!-- Mensagens -->
+    <div id="chat-messages">
+
+        <div class="bot-message">
+            Olá! 👋 Seja bem-vindo à Velo Engenharia.
+            Como podemos ajudar você?
+        </div>
+
+        <!-- Opções rápidas -->
+        <div class="chat-options">
+
+            <button type="button" class="quick-option" data-message="Quero solicitar um orçamento">
+                💰 Solicitar orçamento
+            </button>
+
+            <button type="button" class="quick-option" data-message="Quais serviços vocês oferecem?">
+                🏗️ Serviços
+            </button>
+
+            <button type="button" class="quick-option" data-message="Gostaria de conhecer os projetos">
+                🏢 Conhecer projetos
+            </button>
+
+            <button type="button" class="quick-option" data-message="Quero entrar em contato">
+                📞 Contato
+            </button>
+
+        </div>
+
     </div>
+
+
+    <!-- Campo de mensagem -->
+    <div id="chat-input-area">
+
+        <input type="text" id="chat-input" placeholder="Digite sua mensagem..." autocomplete="off">
+
+        <button id="send-message" type="button">
+            Enviar
+        </button>
+
+    </div>
+
 </div>
+
 
   <script src="script.js"></script>
 </body>

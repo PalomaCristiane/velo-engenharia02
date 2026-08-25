@@ -512,25 +512,396 @@ function isValidEmail(value) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 }
 
-// ===== CHAT FLUTUANTE =====
+// ==========================================
+// CHAT FLUTUANTE - VELO ENGENHARIA
+// ==========================================
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
 
-    const botao = document.getElementById('chat-toggle');
-    const janela = document.getElementById('chat-box');
+    const botaoChat = document.getElementById("chat-toggle");
+    const janelaChat = document.getElementById("chat-box");
+    const botaoFechar = document.getElementById("chat-close");
 
-    if (!botao || !janela) {
-        console.log('Elemento do chat não encontrado');
+    const campoMensagem = document.getElementById("chat-input");
+    const botaoEnviar = document.getElementById("send-message");
+
+    const areaMensagens = document.getElementById("chat-messages");
+    const opcoesRapidas = document.querySelectorAll(".quick-option");
+
+
+    // ==========================================
+    // VERIFICAR ELEMENTOS
+    // ==========================================
+
+    if (
+        !botaoChat ||
+        !janelaChat ||
+        !campoMensagem ||
+        !botaoEnviar ||
+        !areaMensagens
+    ) {
+
+        console.log("Elementos do chat não encontrados.");
         return;
+
     }
 
-    botao.addEventListener('click', function() {
 
-        if (janela.style.display === 'flex') {
-            janela.style.display = 'none';
-        } else {
-            janela.style.display = 'flex';
+    // ==========================================
+    // ABRIR CHAT
+    // ==========================================
+
+    botaoChat.addEventListener("click", function () {
+
+        janelaChat.classList.toggle("chat-open");
+
+        if (janelaChat.classList.contains("chat-open")) {
+
+            campoMensagem.focus();
+
         }
+
+    });
+
+
+    // ==========================================
+    // FECHAR CHAT
+    // ==========================================
+
+    if (botaoFechar) {
+
+        botaoFechar.addEventListener("click", function () {
+
+            janelaChat.classList.remove("chat-open");
+
+        });
+
+    }
+
+
+    // ==========================================
+    // ADICIONAR MENSAGEM DO USUÁRIO
+    // ==========================================
+
+    function adicionarMensagemUsuario(mensagem) {
+
+        const div = document.createElement("div");
+
+        div.classList.add("user-message");
+
+        div.textContent = mensagem;
+
+        areaMensagens.appendChild(div);
+
+        rolarParaBaixo();
+
+    }
+
+
+    // ==========================================
+    // ADICIONAR MENSAGEM DO BOT
+    // ==========================================
+
+    function adicionarMensagemBot(mensagem) {
+
+        const div = document.createElement("div");
+
+        div.classList.add("bot-message");
+
+        div.textContent = mensagem;
+
+        areaMensagens.appendChild(div);
+
+        rolarParaBaixo();
+
+    }
+
+
+    // ==========================================
+    // INDICADOR "DIGITANDO..."
+    // ==========================================
+
+    function mostrarDigitando() {
+
+        const div = document.createElement("div");
+
+        div.id = "bot-typing";
+
+        div.classList.add("bot-message");
+
+        div.textContent = "Digitando...";
+
+        areaMensagens.appendChild(div);
+
+        rolarParaBaixo();
+
+    }
+
+
+    function removerDigitando() {
+
+        const digitando = document.getElementById("bot-typing");
+
+        if (digitando) {
+
+            digitando.remove();
+
+        }
+
+    }
+
+
+    // ==========================================
+    // ROLAR CHAT PARA BAIXO
+    // ==========================================
+
+    function rolarParaBaixo() {
+
+        areaMensagens.scrollTop = areaMensagens.scrollHeight;
+
+    }
+
+
+    // ==========================================
+    // GERAR RESPOSTA AUTOMÁTICA
+    // ==========================================
+
+    function responderMensagem(mensagem) {
+
+        const texto = mensagem.toLowerCase();
+
+
+        // ORÇAMENTO
+        if (
+            texto.includes("orçamento") ||
+            texto.includes("orcamento") ||
+            texto.includes("preço") ||
+            texto.includes("preco") ||
+            texto.includes("valor")
+        ) {
+
+            return "Claro! 😊 Para solicitar um orçamento, acesse a seção Orçamento do nosso site. Nossa equipe poderá entender melhor seu projeto e entrar em contato com você.";
+
+
+        }
+
+
+        // SERVIÇOS
+        if (
+            texto.includes("serviço") ||
+            texto.includes("servicos") ||
+            texto.includes("serviços") ||
+            texto.includes("fazem") ||
+            texto.includes("trabalham")
+        ) {
+
+            return "A Velo Engenharia atua com projetos, construções, reformas e soluções de engenharia. 🏗️ Você pode conhecer todos os nossos serviços na seção Serviços.";
+
+
+        }
+
+
+        // PROJETOS / GALERIA
+        if (
+            texto.includes("projeto") ||
+            texto.includes("projetos") ||
+            texto.includes("obra") ||
+            texto.includes("obras") ||
+            texto.includes("galeria")
+        ) {
+
+            return "Temos diversos projetos e obras para apresentar. 🏢 Acesse a nossa Galeria para conhecer alguns dos trabalhos realizados pela Velo Engenharia.";
+
+
+        }
+
+
+        // CONTATO
+        if (
+            texto.includes("contato") ||
+            texto.includes("telefone") ||
+            texto.includes("email") ||
+            texto.includes("e-mail") ||
+            texto.includes("falar")
+        ) {
+
+            return "Será um prazer conversar com você! 📞 Acesse a seção Contato para encontrar nossos canais de atendimento.";
+
+
+        }
+
+
+        // AGENDA
+        if (
+            texto.includes("agenda") ||
+            texto.includes("agendar") ||
+            texto.includes("reunião") ||
+            texto.includes("reuniao") ||
+            texto.includes("visita")
+        ) {
+
+            return "Podemos agendar uma conversa para entender melhor o seu projeto. 📅 Acesse a seção Agenda para verificar as opções disponíveis.";
+
+
+        }
+
+
+        // SOBRE
+        if (
+            texto.includes("quem são") ||
+            texto.includes("quem sao") ||
+            texto.includes("empresa") ||
+            texto.includes("velo")
+        ) {
+
+            return "A Velo Engenharia é uma empresa voltada para soluções em engenharia e construção, buscando unir qualidade, segurança, eficiência e sofisticação em cada projeto.";
+
+
+        }
+
+
+        // SAUDAÇÕES
+        if (
+            texto.includes("olá") ||
+            texto.includes("ola") ||
+            texto.includes("oi") ||
+            texto.includes("bom dia") ||
+            texto.includes("boa tarde") ||
+            texto.includes("boa noite")
+        ) {
+
+            return "Olá! 👋 É um prazer atender você. Como posso ajudar?";
+
+
+        }
+
+
+        // AGRADECIMENTO
+        if (
+            texto.includes("obrigado") ||
+            texto.includes("obrigada") ||
+            texto.includes("valeu")
+        ) {
+
+            return "Nós que agradecemos pelo contato! 😊 A Velo Engenharia está à disposição para ajudar no seu projeto.";
+
+
+        }
+
+
+        // RESPOSTA PADRÃO
+        return "Obrigado pela sua mensagem! 😊 Ainda estou aprendendo a responder essa solicitação. Você pode escolher uma das opções abaixo: Orçamento, Serviços, Projetos ou Contato.";
+
+    }
+
+
+    // ==========================================
+    // ENVIAR MENSAGEM
+    // ==========================================
+
+    function enviarMensagem() {
+
+        const mensagem = campoMensagem.value.trim();
+
+
+        // Não envia mensagem vazia
+        if (mensagem === "") {
+
+            return;
+
+        }
+
+
+        // Mostra mensagem do usuário
+        adicionarMensagemUsuario(mensagem);
+
+
+        // Limpa campo
+        campoMensagem.value = "";
+
+
+        // Mostra "Digitando..."
+        mostrarDigitando();
+
+
+        // Resposta automática
+        setTimeout(function () {
+
+            removerDigitando();
+
+            const resposta = responderMensagem(mensagem);
+
+            adicionarMensagemBot(resposta);
+
+        }, 800);
+
+    }
+
+
+    // ==========================================
+    // BOTÃO ENVIAR
+    // ==========================================
+
+    botaoEnviar.addEventListener("click", function () {
+
+        enviarMensagem();
+
+    });
+
+
+    // ==========================================
+    // ENTER PARA ENVIAR
+    // ==========================================
+
+    campoMensagem.addEventListener("keydown", function (evento) {
+
+        if (evento.key === "Enter") {
+
+            evento.preventDefault();
+
+            enviarMensagem();
+
+        }
+
+    });
+
+
+    // ==========================================
+    // OPÇÕES RÁPIDAS
+    // ==========================================
+
+    opcoesRapidas.forEach(function (botao) {
+
+        botao.addEventListener("click", function () {
+
+            const mensagem = botao.getAttribute("data-message");
+
+            if (!mensagem) {
+
+                return;
+
+            }
+
+
+            // Mostra pergunta do usuário
+            adicionarMensagemUsuario(mensagem);
+
+
+            // Resposta automática
+            mostrarDigitando();
+
+
+            setTimeout(function () {
+
+                removerDigitando();
+
+                const resposta = responderMensagem(mensagem);
+
+                adicionarMensagemBot(resposta);
+
+            }, 800);
+
+        });
 
     });
 
