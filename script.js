@@ -157,6 +157,35 @@ document.addEventListener('click', function (e) {
   });
 })();
 
+/* ─── Galeria — filtros ──────────────────────────────────── */
+
+(function initGalleryFilters() {
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const cards      = document.querySelectorAll('.gallery-card');
+
+  if (!filterBtns.length) return;
+
+  filterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      // Atualiza botão ativo
+      filterBtns.forEach(function (b) { b.classList.remove('active'); });
+      this.classList.add('active');
+
+      const filter = this.getAttribute('data-filter');
+
+      cards.forEach(function (card) {
+        const type = card.getAttribute('data-type');
+
+        if (filter === 'todos' || type === filter) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+})();
+
 /* ─── Agenda ───────────────────────────────────────────── */
 
 (function initAgendaForm() {
