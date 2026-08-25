@@ -874,15 +874,16 @@
   </script>
 
 
-<!-- ==========================================
-     CHAT FLUTUANTE - VELO ENGENHARIA
-========================================== -->
 
-<!-- BOTÃO DO CHAT -->
-<button id="chat-toggle" type="button">💬 </button>
+<!-- CHAT FLUTUANTE - VELO ENGENHARIA -->
 
-<!-- JANELA DO CHAT -->
+<button id="chat-toggle" type="button" aria-label="Abrir chat">
+    💬
+</button>
+
+
 <div id="chat-box">
+
     <div id="chat-header">
 
         <div>
@@ -890,34 +891,74 @@
             <span>Atendimento Online</span>
         </div>
 
-        <button id="chat-close" type="button">× </button>
+        <button id="chat-close" type="button" aria-label="Fechar chat">
+            ×
+        </button>
+
     </div>
+
 
     <div id="chat-messages">
 
-        <div class="bot-message">Olá! 👋 Seja bem-vindo à Velo Engenharia.<br>
+        <div class="bot-message">
+            Olá! 👋 Seja bem-vindo à Velo Engenharia.
+            <br>
             Como podemos ajudar?
         </div>
 
+
         <div class="chat-options">
 
-            <button class="quick-option" type="button" data-message="Quero solicitar um orçamento">💰 Solicitar orçamento</button>
+            <button
+                type="button"
+                class="quick-option"
+                data-message="Quero solicitar um orçamento">
+                💰 Solicitar orçamento
+            </button>
 
-            <button class="quick-option" type="button" data-message="Quais serviços vocês oferecem?">🏗️ Serviços </button>
 
-            <button class="quick-option" type="button" data-message="Quero conhecer os projetos">🏢 Projetos</button>
+            <button
+                type="button"
+                class="quick-option"
+                data-message="Quais serviços vocês oferecem?">
+                🏗️ Serviços
+            </button>
 
-            <button class="quick-option" type="button" data-message="Quero entrar em contato">📞 Contato</button>
+
+            <button
+                type="button"
+                class="quick-option"
+                data-message="Quero conhecer os projetos">
+                🏢 Projetos
+            </button>
+
+
+            <button
+                type="button"
+                class="quick-option"
+                data-message="Quero entrar em contato">
+                📞 Contato
+            </button>
 
         </div>
 
     </div>
 
+
     <div id="chat-input-area">
 
-        <input type="text" id="chat-input" placeholder="Digite sua mensagem..."/>
+        <input
+            type="text"
+            id="chat-input"
+            placeholder="Digite sua mensagem..."
+            autocomplete="off"
+        >
 
-        <button id="send-message" type="button">Enviar </button>
+        <button
+            id="send-message"
+            type="button">
+            Enviar
+        </button>
 
     </div>
 
