@@ -487,10 +487,12 @@ a {
 @media (min-width: 1024px) { .hero-card { display: block; } }
 
 .hero-card-img {
-  width: 100%;
+  display: block;
+  width: 80%;
   height: 18rem;
   object-fit: cover;
   opacity: .85;
+  margin: 0 auto;
 }
 .hero-card-body { padding: 1.5rem; }
 .hero-card-title {
@@ -1380,4 +1382,5 @@ a {
     #chat-toggle {
         left: 10px;
     }
+
 }
